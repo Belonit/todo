@@ -10,9 +10,11 @@ export function useTasks(storageKey = 'my-todo-list') {
     if (!text || !text.trim()) return
     taskList.value.push({ text: text.trim(), done: false })
   }
+
   function removeTask(index: number) {
     taskList.value.splice(index, 1)
   }
+
   function updateTaskText(index: number, newText: string) {
     taskList.value[index].text = newText
   }
@@ -22,7 +24,7 @@ export function useTasks(storageKey = 'my-todo-list') {
     (newVal) => {
       localStorage.setItem(storageKey, JSON.stringify(newVal))
     },
-    { deep: true }
+    { deep: true },
   )
 
   onMounted(() => {
@@ -35,6 +37,7 @@ export function useTasks(storageKey = 'my-todo-list') {
       }
     }
   })
+
   return {
     taskList,
     addTask,

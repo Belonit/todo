@@ -4,18 +4,21 @@
     <Calendar v-model="date" inline showWeek />
   </div>
 </template>
+
 <script setup lang="ts">
-  import { ref } from 'vue'
-  const date = ref<Date | null>(null)
+// Data
+const date = ref<Date | null>(null)
 </script>
+
 <style scoped>
-  .main {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  .calendar-wrapper {
-    margin: 0 auto;
-    max-width: 500px;
-    text-align: center;
-  }
+.main {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.calendar-wrapper {
+  margin: 0 auto;
+  max-width: 500px;
+  text-align: center;
+}
 </style>

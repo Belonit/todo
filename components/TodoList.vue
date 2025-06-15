@@ -10,20 +10,25 @@
     </TodoItem>
   </ul>
 </template>
-<script setup lang="ts">
-  import TodoItem from './TodoItem.vue'
-  import type { Task } from '~/composables/useTasks'
 
-  const props = defineProps<{
-    taskList: Task[]
-    removeTask: (index: number) => void
-    updateTaskText: (index: number, newText: string) => void
-  }>()
+<script setup lang="ts">
+import type { Task } from '~/composables/useTasks'
+
+// Components
+import TodoItem from './TodoItem.vue'
+
+// Props
+const props = defineProps<{
+  taskList: Task[]
+  removeTask: (index: number) => void
+  updateTaskText: (index: number, newText: string) => void
+}>()
 </script>
+
 <style scoped>
-  ul {
-    list-style: none;
-    padding-left: 0;
-    margin-top: 20px;
-  }
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 20px;
+}
 </style>

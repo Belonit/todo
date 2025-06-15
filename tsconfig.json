@@ -4,18 +4,9 @@
   "compilerOptions": {
     "strict": true,
     "baseUrl": ".",
-    "types": ["@types/node", "vue"],
     "paths": {
       "~/*": ["./*"],
       "@/*": ["./*"]
     }
-  },
-  "include": [
-    "shims-vue.d.ts",
-    "components/**/*.vue",
-    "composables/**/*.ts",
-    "pages/**/*.vue",
-    "app.vue",
-    "nuxt.config.ts"
-  ]
+  }
 }
