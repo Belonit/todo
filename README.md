@@ -1,2 +1,2 @@
 # todo
-first todo composition api + ts
+first todo nuxt + composition api + ts
